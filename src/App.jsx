@@ -53,7 +53,8 @@ export default App
 
 // const pokeCount = 150
 
-{/* <div className="pokemon">
+{
+  /* <div className="pokemon">
   <div className="img-container">
     <img
       src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
@@ -67,9 +68,13 @@ export default App
       Type: <span>grass</span>
     </small>
   </div>
-</div> */}
-{/* <button className='load-more'>Load More</button> */}
-{/* <div className="pokemon">
+</div> */
+}
+{
+  /* <button className='load-more'>Load More</button> */
+}
+{
+  /* <div className="pokemon">
   <div className="img-container">
   <img
   src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
@@ -98,10 +103,10 @@ export default App
   Type: <span>grass</span>
   </small>
   </div>
-</div> */}
+</div> */
+}
 // const fetchPokemon = async () => {
-  //   for (let i = 0; i <= pokeCount; i++) {
-    //     await getPokemon(i)
-    //   }
-    // }
-    
+//   for (let i = 0; i <= pokeCount; i++) {
+//     await getPokemon(i)
+//   }
+// }
