@@ -5,10 +5,7 @@ const pokemonCard = ({ id, name, image, type }) => {
     <div>
       <div className="pokemon">
         <div className="img-container">
-          <img
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-            alt={name}
-          />
+          <img src={image} alt={name} />
         </div>
         <div className="info">
           <span className="number">#0{id}</span>
