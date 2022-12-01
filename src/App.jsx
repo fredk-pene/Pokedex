@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
+import PokemonCard from './components/PokemonCard'
 
 function App() {
   const [pokeData, setPokeData] = useState([])
@@ -21,7 +22,6 @@ function App() {
         const data = await res.json()
 
         setPokeData((currentList) => [...currentList, data])
-
       })
     }
     createPokeObj(data.results)
@@ -36,7 +36,10 @@ function App() {
     <>
       <h1>Pokedex</h1>
       <div className="poke-container" id="pokemon-container">
-        <div className="pokemon">
+        {pokeData.map((pokemon) => (
+        <PokemonCard/>
+        ))}
+        {/* <div className="pokemon">
           <div className="img-container">
             <img
               src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
@@ -50,7 +53,7 @@ function App() {
               Type: <span>grass</span>
             </small>
           </div>
-        </div>
+        </div> */}
         {/* <button className='load-more'>Load More</button> */}
         {/* <div className="pokemon">
           <div className="img-container">
