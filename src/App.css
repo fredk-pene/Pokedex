@@ -19,6 +19,78 @@ h1 {
   letter-spacing: 3px;
 }
 
+.fire {
+  background: linear-gradient(to right, #e07141, #efefbb);
+}
+
+.grass {
+  background: linear-gradient(to right, hsl(109, 78%, 64%), #efefbb);
+}
+
+.electric {
+  background: linear-gradient(to right, #f5e9ad, #efefbb);
+}
+
+.water {
+  background: linear-gradient(to right, #a5cff1, #efefbb);
+
+  
+}
+
+.ground {
+  background: linear-gradient(to right, #f4e7da, #efefbb);
+
+}
+
+.rock {
+  background: linear-gradient(to right, #d5d5d4, #efefbb);
+
+}
+
+.fairy {
+  background: linear-gradient(to right, #fceaff, #efefbb);
+
+}
+
+.poison {
+  background: linear-gradient(to right, hsl(250, 44%, 72%), #efefbb);
+
+}
+
+.bug {
+  background: linear-gradient(to right, #fae9d1, #efefbb);
+
+}
+
+.dragon {
+  background: linear-gradient(to right, #97b3e6, #efefbb);
+
+}
+
+.psychic {
+  background: linear-gradient(to right, #eaeda1, #efefbb);
+
+}
+
+.flying {
+  background: linear-gradient(to right, #F5F5F2, #efefbb);
+
+}
+
+.fighting {
+  background: linear-gradient(to right, #E6E0D4, #efefbb);
+
+}
+
+.normal {
+  background: linear-gradient(to right, #F5F5F8, #efefbb);
+
+}
+
+.title {
+  text-align: center;
+}
+
 .poke-container {
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +101,7 @@ h1 {
 }
 
 .pokemon {
-  background-color: #eee;
+  /* background-color: #eee; */
   border-radius: 10px;
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   margin: 10px;

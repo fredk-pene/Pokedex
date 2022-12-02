@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-      <h1>Pokedex</h1>
+      <h1 className="title">Pokedex</h1>
       <div className="poke-container" id="pokemon-container">
         {pokeData.map((pokemon, index) => (
           <PokemonCard
@@ -50,63 +50,3 @@ function App() {
 }
 
 export default App
-
-// const pokeCount = 150
-
-{
-  /* <div className="pokemon">
-  <div className="img-container">
-    <img
-      src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-      alt="bulbasaur"
-    />
-  </div>
-  <div className="info">
-    <span className="number">#001</span>
-    <h3 className="name">Bulbasaur</h3>
-    <small className="type">
-      Type: <span>grass</span>
-    </small>
-  </div>
-</div> */
-}
-{
-  /* <button className='load-more'>Load More</button> */
-}
-{
-  /* <div className="pokemon">
-  <div className="img-container">
-  <img
-  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
-  alt="bulbasaur"
-  />
-  </div>
-  <div className="info">
-  <span className="number">#002</span>
-  <h3 className="name">Ivysaur</h3>
-  <small className="type">
-  Type: <span>grass</span>
-  </small>
-  </div>
-  </div>
-  <div className="pokemon">
-  <div className="img-container">
-  <img
-  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
-  alt="bulbasaur"
-  />
-  </div>
-  <div className="info">
-  <span className="number">#003</span>
-  <h3 className="name">Venusaur</h3>
-  <small className="type">
-  Type: <span>grass</span>
-  </small>
-  </div>
-</div> */
-}
-// const fetchPokemon = async () => {
-//   for (let i = 0; i <= pokeCount; i++) {
-//     await getPokemon(i)
-//   }
-// }
