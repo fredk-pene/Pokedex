@@ -5,7 +5,7 @@ import PokemonCard from './components/PokemonCard'
 function App() {
   const [pokeData, setPokeData] = useState([])
   const [loadPoke, setLoadPoke] = useState(
-    'https://pokeapi.co/api/v2/pokemon/?limit=150'
+    'https://pokeapi.co/api/v2/pokemon/?limit=40'
   )
 
   const getPokemon = async () => {
@@ -44,6 +44,11 @@ function App() {
             key={index}
           />
         ))}
+      </div>
+      <div class="center-on-page">
+        <div class="pokeball">
+          <button class="pokeball__button"></button>
+        </div>
       </div>
     </>
   )

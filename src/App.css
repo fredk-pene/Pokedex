@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 
-* {
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -20,74 +23,82 @@ h1 {
 }
 
 .fire {
-  background: linear-gradient(to right, #e07141, #efefbb);
+  background: linear-gradient(to right, #e07141, rgb(255, 205, 184));
 }
 
 .grass {
-  background: linear-gradient(to right, hsl(109, 78%, 64%), #efefbb);
+  background: linear-gradient(to right, hsl(109, 79%, 70%), hsl(109, 100%, 82%));
 }
 
 .electric {
-  background: linear-gradient(to right, #f5e9ad, #efefbb);
+  background: linear-gradient(to right, rgb(239, 229, 88), rgb(255, 250, 174));
 }
 
 .water {
-  background: linear-gradient(to right, #a5cff1, #efefbb);
+  background: linear-gradient(to right, #a5cff1, #d0eaff);
 
   
 }
 
 .ground {
-  background: linear-gradient(to right, #f4e7da, #efefbb);
+  background: linear-gradient(to right, rgb(192, 154, 116), rgb(248, 198, 149));
 
 }
 
 .rock {
-  background: linear-gradient(to right, #d5d5d4, #efefbb);
+  background: linear-gradient(to right, #d5d5d4, #f7f7f2);
 
 }
 
 .fairy {
-  background: linear-gradient(to right, #fceaff, #efefbb);
+  background: linear-gradient(to right, #f2d8f7, #f2e7f4);
 
 }
 
 .poison {
-  background: linear-gradient(to right, hsl(250, 44%, 72%), #efefbb);
+  background: linear-gradient(to right, hsl(251, 66%, 78%), hsl(251, 82%, 94%));
 
 }
 
 .bug {
-  background: linear-gradient(to right, #fae9d1, #efefbb);
+  background: linear-gradient(to right, #277f30, #65c56f);
 
 }
 
 .dragon {
-  background: linear-gradient(to right, #97b3e6, #efefbb);
+  background: linear-gradient(to right, #4981e8, #9ab7ec);
 
 }
 
 .psychic {
-  background: linear-gradient(to right, #eaeda1, #efefbb);
+  background: linear-gradient(to right, #e9ec99, #fcffcc);
 
 }
 
 .flying {
-  background: linear-gradient(to right, #F5F5F2, #efefbb);
+  background: linear-gradient(to right, #F5F5F2, #fbfbe0);
 
 }
 
 .fighting {
-  background: linear-gradient(to right, #E6E0D4, #efefbb);
+  background: linear-gradient(to right, #E6E0D4, rgb(239, 239, 214));
 
 }
 
 .normal {
-  background: linear-gradient(to right, #F5F5F8, #efefbb);
+  background: linear-gradient(to right, #c7c7ca, #dfdfe2);
 
 }
 
+.ice {
+  background: linear-gradient(to right, #cee8fc, #f1f6fa);
+}
+
 .title {
+  font-size: 5em;
+  font-family: 'Pokemon Solid', sans-serif;
+  text-shadow: 5px 5px rgb(52,106,189);
+  color: rgb(255,205,0);
   text-align: center;
 }
 
