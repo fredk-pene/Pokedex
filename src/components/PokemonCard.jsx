@@ -10,11 +10,11 @@ const pokemonCard = ({ id, name, image, type }) => {
   return (
     <div>
       <div className={cardColor}>
+          <span className="number">#{pokeId}</span>
         <div className="img-container">
           <img src={image} alt={name} />
         </div>
         <div className="info">
-          <span className="number">#{pokeId}</span>
           <h3 className="name">{pokeName}</h3>
           <small className="type">
             Type: <span>{pokeType}</span>

@@ -23,81 +23,90 @@ h1 {
 }
 
 .fire {
-  background: linear-gradient(to right, #e07141, rgb(255, 205, 184));
+  background: linear-gradient(to bottom, #F08030, rgba(255,255,255,0));
 }
 
 .grass {
-  background: linear-gradient(to right, hsl(109, 79%, 70%), hsl(109, 100%, 82%));
+  background: linear-gradient(to bottom, #78C850, rgba(255,255,255,0));
 }
 
 .electric {
-  background: linear-gradient(to right, rgb(239, 229, 88), rgb(255, 250, 174));
+  background: linear-gradient(to bottom,#F8D030, rgba(255,255,255,0));
 }
 
 .water {
-  background: linear-gradient(to right, #a5cff1, #d0eaff);
+  background: linear-gradient(to bottom, #6890F0,rgba(255,255,255,0));
 
   
 }
 
 .ground {
-  background: linear-gradient(to right, rgb(192, 154, 116), rgb(248, 198, 149));
+  background: linear-gradient(to bottom,#E0C068, rgba(255,255,255,0));
 
 }
 
 .rock {
-  background: linear-gradient(to right, #d5d5d4, #f7f7f2);
+  background: linear-gradient(to bottom, #B8A038, rgba(255,255,255,0));
 
 }
 
 .fairy {
-  background: linear-gradient(to right, #f2d8f7, #f2e7f4);
+  background: linear-gradient(to bottom, #EE99AC, rgba(255,255,255,0));
 
 }
 
 .poison {
-  background: linear-gradient(to right, hsl(251, 66%, 78%), hsl(251, 82%, 94%));
+  background: linear-gradient(to bottom,#A040A0, rgba(255,255,255,0));
 
 }
 
 .bug {
-  background: linear-gradient(to right, #277f30, #65c56f);
+  background: linear-gradient(to bottom, #A8B820, rgba(255,255,255,0));
 
 }
 
 .dragon {
-  background: linear-gradient(to right, #4981e8, #9ab7ec);
+  background: linear-gradient(to bottom, #7038F8, rgba(255,255,255,0));
 
 }
 
 .psychic {
-  background: linear-gradient(to right, #e9ec99, #fcffcc);
+  background: linear-gradient(to bottom, #F85888, rgba(255,255,255,0));
 
 }
 
 .flying {
-  background: linear-gradient(to right, #F5F5F2, #fbfbe0);
+  background: linear-gradient(to bottom, #A890F0, rgba(255,255,255,0));
 
 }
 
 .fighting {
-  background: linear-gradient(to right, #E6E0D4, rgb(239, 239, 214));
+  background: linear-gradient(to bottom, #C03028, rgba(255,255,255,0));
 
 }
 
 .normal {
-  background: linear-gradient(to right, #c7c7ca, #dfdfe2);
+  background: linear-gradient(to bottom, #C4C4A4,rgba(255,255,255,0));
 
 }
 
 .ice {
-  background: linear-gradient(to right, #cee8fc, #f1f6fa);
+  background: linear-gradient(to bottom, #98D8D8, rgba(255,255,255,0));
 }
+
+.ghost {
+  background: linear-gradient(to bottom, #705898, rgba(255,255,255,0));
+}
+
+.dark { 
+  background: linear-gradient(to bottom, #705848, rgba(255,255,255,0));
+}
+
+
 
 .title {
   font-size: 6em;
   font-family: 'Pokemon Solid', sans-serif;
-  /* text-shadow: 5px 5px rgb(52,106,189); */
   text-shadow: -6px -6px 0px rgb(52,106,189),
   0px -6px 0px rgb(52,106,189),
   6px -6px 0px rgb(52,106,189),
@@ -106,8 +115,6 @@ h1 {
  -6px  6px 0px rgb(52,106,189),
   0px  6px 0px rgb(52,106,189),
   6px  6px 0px rgb(52,106,189);;
-  /* -moz-text-shadow: 0 0 2px #000;
-  -webkit-text-shadow: 0 0 2px #000; */
   color: rgb(255,205,0);
   text-align: center;
 }
@@ -157,4 +164,14 @@ h1 {
 .pokemon .info .name {
   margin: 15px 0 7px;
   letter-spacing: 1px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+  border: 1px solid #91C9FF;
+
 }
