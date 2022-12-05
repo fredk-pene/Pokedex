@@ -129,19 +129,21 @@ h1 {
 }
 
 .pokemon {
-  /* background-color: #eee; */
-  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 40px;
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   margin: 10px;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
+  /* width: 100%;
+  height: 100%; */
 }
 
 .pokemon .img-container {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 300px;
+  height: 300px;
   text-align: center;
 }
 
@@ -166,12 +168,245 @@ h1 {
   letter-spacing: 1px;
 }
 
-.btn {
+.name {
+  font-family:sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.number {
+  font-family:sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+/* .btn {
+  background: #f5f5f5 linear-gradient(#f5f5f5,#f1f1f1) repeat-x;
+  border-radius:7px;
+  border: 1px solid #c6c6c6;
+  color: black;
+  padding: 1.2rem 1.5rem;
+  min-width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  padding: auto;
-  border: 1px solid #91C9FF;
-
+  margin: 40px auto;
+  padding:20px 16px;
 }
+
+.btn:hover{
+  background: black;
+  color: white;
+} */
+
+.btn-bg {
+  width: 100%;
+  height: 100vh;
+  min-height: 300px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-bg.Pokemon {
+  background: #ffd750
+}
+
+.btn-bg.Pokemon .btn-group .ball button {
+  border: 5px solid #50514f;
+  border-radius: 5px;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-bg.Pokemon .btn-group .ball button {
+ border-color: #ffd740
+}
+
+button {
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #fff;
+  position: relative;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-size: 1.5em;
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::before {
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::after {
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover a {
+ transition: none;
+ color: transparent;
+ z-index: 999;
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover a::before {
+transform: translate3d(100%, 0, 0);
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before,body .btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
+  transition-delay: 0.3s;
+  transform: translate3d(0, 0, 0);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball {
+  position: absolute;
+  content: 'go!';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9
+}
+
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before,
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #ef594f;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
+top: 50%;
+background: #fff;
+}
+
+.btn-bg.Pokemon .btn-group .ball button a {
+  color: #50514f;
+  font-weight: 600;
+  font-size: 1.5em;
+  transition: color 0.5s 0.25s;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 999
+}
+
+body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: #50514f;
+  top: calc(50% 2.5px);
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1); 
+}
+
+body .btn-bg.Pokemon .btn-group .ball button a span {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.btn-bg.Pokemon .btn-group .ball button a span::before {
+  position: absolute;
+  content: attr(data-letters);
+  left: 0;
+  width: 100%;
+  color: #fff;
+  transition: transform 0.5s;
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before {
+  top: 0;
+  color: #ef594f;
+  transform: translate3d(0, 100%, 0)
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2) {
+  top: 50%;
+}
+
+.btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
+  bottom: 0;
+  transform: translate3d(0, -100%, 0);
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.btn {
+  margin: 0 30px 30px 30px;
+  display: block;
+}
+
+.btn-info {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'lato';
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 3.5em;
+  color: #fff;
+}
+
+.btn-mention {
+  margin-bottom: 70px;
+  text-align: center;
+  font-family: 'lato';
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.btn-mention span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+button a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
