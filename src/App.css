@@ -2,9 +2,9 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
+  /* -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
 
 body {
@@ -257,8 +257,9 @@ body .btn-bg.Pokemon .btn-group .ball button:hover a {
 body .btn-bg.Pokemon .btn-group .ball button:hover a::before {
 transform: translate3d(100%, 0, 0);
 }
-
-body .btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before,body .btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
+q
+body .btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before,
+body .btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
   transition-delay: 0.3s;
   transform: translate3d(0, 0, 0);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
@@ -362,31 +363,9 @@ body .btn-bg.Pokemon .btn-group .ball button a span:nth-child(2)::before {
   display: block;
 }
 
-.btn-info {
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: 'lato';
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  font-size: 3.5em;
-  color: #fff;
-}
-
 button a {
   text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

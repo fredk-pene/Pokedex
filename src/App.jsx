@@ -5,7 +5,7 @@ import PokemonCard from './components/PokemonCard'
 function App() {
   const [pokeData, setPokeData] = useState([])
   const [loadPoke, setLoadPoke] = useState(
-    'https://pokeapi.co/api/v2/pokemon/?limit=1'
+    'https://pokeapi.co/api/v2/pokemon/?&limit=21'
   )
 
   const getPokemon = async () => {
@@ -24,6 +24,7 @@ function App() {
       })
     }
     createPokeObj(data.results)
+     console.log(data.results)
   }
 
   useEffect(() => {
@@ -36,13 +37,13 @@ function App() {
       <div className="poke-container" id="pokemon-container">
         {pokeData.map((pokemon, index) => (
           <PokemonCard
-            id={pokemon.id}
-            image={pokemon.sprites.other['official-artwork'].front_default}
-            name={pokemon.name}
-            type={pokemon.types[0].type.name}
-            key={index}
+          id={pokemon.id}
+          image={pokemon.sprites.other['official-artwork'].front_default}
+          name={pokemon.name}
+          type={pokemon.types[0].type.name}
+          key={index}
           />
-        ))}
+          ))}
       </div>
       {/* <button class="btn" onClick={() => getPokemon()}>
         Load More
@@ -50,7 +51,7 @@ function App() {
       <div className="btn-bg Pokemon">
         <div className="btn-group">
           <div className="btn ball">
-            <button>
+            <button onClick={getPokemon}>
               <div className="pokemon-ball"></div>
               <a>
                 Load
