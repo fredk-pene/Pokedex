@@ -201,9 +201,8 @@ h1 {
   color: white;
 } */
 
-.btn-bg {
+body .btn-bg {
   width: 100%;
-  height: 100vh;
   min-height: 300px; 
   display: flex;
   flex-direction: column;
@@ -211,11 +210,7 @@ h1 {
   justify-content: center;
 }
 
-.btn-bg.Pokemon {
-  background: #ffd750
-}
-
-.btn-bg.Pokemon .btn-group .ball button {
+body .btn-bg.Pokemon .btn-group .ball button {
   border: 5px solid #50514f;
   border-radius: 5px;
   background: transparent;
@@ -223,13 +218,13 @@ h1 {
   position: relative;
 }
 
-.btn-bg.Pokemon .btn-group .ball button {
+body .btn-bg.Pokemon .btn-group .ball button:hover {
  border-color: #ffd740
 }
 
 button {
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
   outline: none;
   color: #fff;
   position: relative;
@@ -241,47 +236,47 @@ button {
   font-size: 1.5em;
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::before {
+body .btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::before {
   transform: translate3d(0, -100%, 0);
   transition: transform 0.25s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::after {
+body .btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::after {
   transform: translate3d(0, -100%, 0);
   transition: transform 0.25s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover a {
+body .btn-bg.Pokemon .btn-group .ball button:hover a {
  transition: none;
  color: transparent;
  z-index: 999;
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover a::before {
+body .btn-bg.Pokemon .btn-group .ball button:hover a::before {
 transform: translate3d(100%, 0, 0);
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before,body .btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
+body .btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before,body .btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
   transition-delay: 0.3s;
   transform: translate3d(0, 0, 0);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 
-.btn-bg.Pokemon .btn-group .ball button .pokemon-ball {
+body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball {
   position: absolute;
-  content: 'go!';
+  content: 'More!';
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9
+  z-index: 9;
 }
 
-.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before,
-.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
+body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before,
+body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
   position: absolute;
   content: '';
   top: 0;
@@ -294,12 +289,12 @@ transform: translate3d(100%, 0, 0);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
+body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
 top: 50%;
 background: #fff;
 }
 
-.btn-bg.Pokemon .btn-group .ball button a {
+body .btn-bg.Pokemon .btn-group .ball button a {
   color: #50514f;
   font-weight: 600;
   font-size: 1.5em;
@@ -310,7 +305,7 @@ background: #fff;
   z-index: 999
 }
 
-body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before{
+body .btn-bg.Pokemon .btn-group .ball button a::before{
   position: absolute;
   content: '';
   width: 100%;
@@ -318,6 +313,7 @@ body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::before{
   background: #50514f;
   top: calc(50% 2.5px);
   transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1); 
+  transform: translate3d(-100%, 0, 0);
 }
 
 body .btn-bg.Pokemon .btn-group .ball button a span {
@@ -329,7 +325,7 @@ body .btn-bg.Pokemon .btn-group .ball button a span {
   overflow: hidden;
 }
 
-.btn-bg.Pokemon .btn-group .ball button a span::before {
+body.btn-bg.Pokemon .btn-group .ball button a span::before {
   position: absolute;
   content: attr(data-letters);
   left: 0;
@@ -338,17 +334,17 @@ body .btn-bg.Pokemon .btn-group .ball button a span {
   transition: transform 0.5s;
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover a span:first-child::before {
+body .btn-bg.Pokemon .btn-group .ball button a span:first-child::before {
   top: 0;
   color: #ef594f;
   transform: translate3d(0, 100%, 0)
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2) {
+body .btn-bg.Pokemon .btn-group .ball button a span:nth-child(2) {
   top: 50%;
 }
 
-.btn-bg.Pokemon .btn-group .ball button:hover a span:nth-child(2)::before {
+body .btn-bg.Pokemon .btn-group .ball button a span:nth-child(2)::before {
   bottom: 0;
   transform: translate3d(0, -100%, 0);
 }
@@ -375,20 +371,6 @@ body .btn-bg.Pokemon .btn-group .ball button a span {
   font-weight: 600;
   font-size: 3.5em;
   color: #fff;
-}
-
-.btn-mention {
-  margin-bottom: 70px;
-  text-align: center;
-  font-family: 'lato';
-  letter-spacing: 0.1em;
-  font-size: 1.1em;
-  color: #fff;
-}
-
-.btn-mention span {
-  font-size: 1.2em;
-  font-weight: 600;
 }
 
 button a {

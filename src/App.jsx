@@ -5,7 +5,7 @@ import PokemonCard from './components/PokemonCard'
 function App() {
   const [pokeData, setPokeData] = useState([])
   const [loadPoke, setLoadPoke] = useState(
-    'https://pokeapi.co/api/v2/pokemon/?limit=21'
+    'https://pokeapi.co/api/v2/pokemon/?limit=1'
   )
 
   const getPokemon = async () => {
@@ -48,14 +48,15 @@ function App() {
         Load More
       </button> */}
       <div className="btn-bg Pokemon">
-        <div className="btn-info">Pokémon</div>
-        <div className="btn-mention">More</div>
         <div className="btn-group">
           <div className="btn ball">
             <button>
-              <div className="pokemon-ball"></div><a>Pokémon{' '}
-              <span data-letter="Go!"></span>
-              <span data-letter="Go!"></span></a>
+              <div className="pokemon-ball"></div>
+              <a>
+                Load
+                <span data-letters="More!"></span>
+                <span data-letters="More!"></span>
+              </a>
             </button>
           </div>
         </div>
