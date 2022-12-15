@@ -105,7 +105,7 @@ h1 {
 
 
 .title {
-  font-size: 6em;
+  font-size: 9em;
   font-family: 'Pokemon Solid', sans-serif;
   text-shadow: -6px -6px 0px rgb(52,106,189),
   0px -6px 0px rgb(52,106,189),
@@ -379,3 +379,26 @@ button a {
     font-size: 0.6em;
   }
 }
+
+    /* style the button */
+    button.back-to-top-button {
+      background-image: url('/src/assets/pokeArrow.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 7em;
+      width: 7em;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      position: fixed;
+      bottom: 20px;
+      right: 40px;    
+      opacity: 0;
+      transition: opacity 2s ease-out !important;;
+    }
+    
+    button.back-to-top-button.show {
+      opacity: 1;
+    }
+    

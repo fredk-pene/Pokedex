@@ -7,10 +7,29 @@ const pokemonCard = ({ id, name, image, type }) => {
 
   const cardColor = `pokemon ${type}`
 
+  // Select all of the images on the page
+  const images = document.querySelectorAll('image')
+
+  // Create an intersection observer
+  const observer = new IntersectionObserver((entries) => {
+    // Loop through the entries
+    entries.forEach((entry) => {
+      // If the entry is intersecting the viewport
+      if (entry.isIntersecting) {
+        // Load the image
+        const img = entry.target
+        img.src = img.dataset.src
+      }
+    })
+  })
+
+  // Observe each of the images
+  images.forEach((img) => observer.observe(img))
+
   return (
     <div>
       <div className={cardColor}>
-          <h3 className="number">#{pokeId}</h3>
+        <h3 className="number">#{pokeId}</h3>
         <div className="img-container">
           <img src={image} alt={name} />
         </div>
