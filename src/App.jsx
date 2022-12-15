@@ -16,10 +16,10 @@ function App() {
 
     setLoadPoke(data.next)
 
-    // Create a new Set to store unique pokemon IDs
+    // Creating a new Set to store unique pokemon IDs
     const uniqueIds = new Set()
 
-    // Use a for-of loop to iterate over the pokemon data
+    // a for-of loop to iterate over the pokemon data
     // and create a new list of pokemon objects with only unique IDs
     const newPokeData = []
     for (const pokemon of data.results) {
@@ -35,7 +35,7 @@ function App() {
       }
     }
 
-    // Use the spread operator to add the new pokemon to the existing list
+    // Using the spread operator to add the new pokemon to the existing list
     setPokeData([...pokeData, ...newPokeData])
     setPokeDataIds(uniqueIds)
   }
@@ -44,15 +44,17 @@ function App() {
     getPokemon()
   }, [])
 
-  let showButton = window.scrollY > 100
+  let showButton = window.scrollY > 150
 
   window.addEventListener('scroll', () => {
-    // Update the value of showButton based on current scroll position
-    if (document.body.scrollTop === 50) {
-      // If user has scrolled back t top, hide the button
+    if (window.scrollY === 0) {
       showButton = false
+      document.querySelector('.back-to-top-button').style.display = 'none'
     } else {
-      // If user has not scrolled back to top, show the button
+      const backToTopButton = document.querySelector('.back-to-top-button')
+      if (backToTopButton.style.display === 'none') {
+        backToTopButton.style.display = 'block'
+      }
       showButton = true
     }
   })
@@ -87,7 +89,7 @@ function App() {
       </div>
       <button
         className={`back-to-top-button${showButton ? ' show' : ''}`}
-        onClick={backToTop}
+        onClick={() => backToTop(showButton)}
       ></button>
     </>
   )
