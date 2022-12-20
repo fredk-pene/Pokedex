@@ -145,7 +145,7 @@ h1 {
   align-items: space-between;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1800px;
 }
 
 .pokemon {
@@ -174,7 +174,6 @@ h1 {
   width: 300px; /* or any other value you want to increase the size to */
   height: 300px; /* or any other value you want to increase the size to */
 }
-
 
 .pokemon .info {
   margin-top: 20px;
