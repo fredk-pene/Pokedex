@@ -7,7 +7,7 @@ function App() {
   const [pokeData, setPokeData] = useState([])
   const [pokeDataIds, setPokeDataIds] = useState(new Set())
   const [loadPoke, setLoadPoke] = useState(
-    'https://pokeapi.co/api/v2/pokemon/?&limit=21'
+    'https://pokeapi.co/api/v2/pokemon/?&limit=12'
   )
 
   const getPokemon = async () => {
@@ -27,6 +27,7 @@ function App() {
         `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
       )
       const pokeData = await res.json()
+      console.log(pokeData)
 
       // Add the pokemon to the new list if its ID is not in the Set
       if (!uniqueIds.has(pokeData.id)) {
@@ -62,17 +63,30 @@ function App() {
   return (
     <>
       <h1 className="title">Pokédex</h1>
+
       <div className="poke-container" id="pokemon-container">
         {pokeData.map((pokemon, index) => (
           <PokemonCard
             id={pokemon.id}
             image={pokemon.sprites.other['official-artwork'].front_default}
+            shinyImage={pokemon.sprites.front_shiny}
             name={pokemon.name}
             type={pokemon.types[0].type.name}
             key={index}
+            onMouseEnter={() => {
+              // Update the image prop with the shiny image URL
+              this.setState({ image: pokemon.sprites.front_shiny })
+            }}
+            onMouseLeave={() => {
+              // Revert back to the default image when the mouse leaves the element
+              this.setState({
+                image: pokemon.sprites.other['official-artwork'].front_default,
+              })
+            }}
           />
         ))}
       </div>
+
       <div className="btn-bg Pokemon">
         <div className="btn-group">
           <div className="btn ball">
