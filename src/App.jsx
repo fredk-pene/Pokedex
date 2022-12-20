@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
+import DarkModeToggle from './components/PokeDarkMode'
 import backToTop from './components/PokeLoader'
 import PokemonCard from './components/PokemonCard'
 
@@ -7,7 +8,7 @@ function App() {
   const [pokeData, setPokeData] = useState([])
   const [pokeDataIds, setPokeDataIds] = useState(new Set())
   const [loadPoke, setLoadPoke] = useState(
-    'https://pokeapi.co/api/v2/pokemon/?&limit=12'
+    'https://pokeapi.co/api/v2/pokemon/?&limit=21'
   )
 
   const getPokemon = async () => {
@@ -40,11 +41,11 @@ function App() {
     setPokeData([...pokeData, ...newPokeData])
     setPokeDataIds(uniqueIds)
   }
-
+  
   useEffect(() => {
     getPokemon()
   }, [])
-
+  
   let showButton = window.scrollY > 150
 
   window.addEventListener('scroll', () => {
@@ -63,7 +64,7 @@ function App() {
   return (
     <>
       <h1 className="title">Pokédex</h1>
-
+      <DarkModeToggle />
       <div className="poke-container" id="pokemon-container">
         {pokeData.map((pokemon, index) => (
           <PokemonCard
@@ -101,6 +102,7 @@ function App() {
           </div>
         </div>
       </div>
+      
       <button
         className={`back-to-top-button${showButton ? ' show' : ''}`}
         onClick={() => backToTop(showButton)}
