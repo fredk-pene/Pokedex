@@ -3,6 +3,7 @@ import './App.css'
 import DarkModeToggle from './components/PokeDarkMode'
 import backToTop from './components/PokeLoader'
 import PokemonCard from './components/PokemonCard'
+import SortByRegion from './components/PokeRegion'
 
 function App() {
   const [pokeData, setPokeData] = useState([])
@@ -41,11 +42,11 @@ function App() {
     setPokeData([...pokeData, ...newPokeData])
     setPokeDataIds(uniqueIds)
   }
-  
+
   useEffect(() => {
     getPokemon()
   }, [])
-  
+
   let showButton = window.scrollY > 150
 
   window.addEventListener('scroll', () => {
@@ -61,9 +62,24 @@ function App() {
     }
   })
 
+  const sortByRegion = (region) => {
+    const sortedPokeData = pokeData.sort((a, b) => {
+      if (a.region.name === region) {
+        return -1
+      } else if (b.region.name === region) {
+        return 1
+      } else {
+        return 0
+      }
+    })
+
+    setPokeData(sortedPokeData)
+  }
+
   return (
     <>
       <h1 className="title">Pokédex</h1>
+      <SortByRegion sortData={sortedPokeData} />
       <DarkModeToggle />
       <div className="poke-container" id="pokemon-container">
         {pokeData.map((pokemon, index) => (
@@ -102,7 +118,7 @@ function App() {
           </div>
         </div>
       </div>
-      
+
       <button
         className={`back-to-top-button${showButton ? ' show' : ''}`}
         onClick={() => backToTop(showButton)}

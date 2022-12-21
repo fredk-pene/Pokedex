@@ -6,10 +6,11 @@ This is an application that uses the PokeAPI to fetch and display information ab
 - View basic information about each Pokemon
 - Scroll to top button
 - Sort by id
+- Dark mode option
+- On hover, show shiny version from game
 
 ## TODO
 - Add additional information (moves, height & weight, shiny alternative, etc.)
-- Dark mode option
 - Sort by type
 
 ## To Run locally
