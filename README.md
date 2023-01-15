@@ -11,7 +11,7 @@ This is an application that uses the PokeAPI to fetch and display information ab
 
 ## TODO
 - Add additional information (moves, height & weight, shiny alternative, etc.)
-- Sort by type
+- Sort by type, Region
 
 ## To Run locally
 
